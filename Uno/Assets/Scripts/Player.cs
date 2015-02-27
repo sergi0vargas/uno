@@ -8,14 +8,47 @@ public class Player : Jugador {
 
     public override void Juega()
     {
-
+        if (!yaChequeo)
+        {
+           ComienzoDeTurno();
+        }
+        else
+        {
+            if (!tieneCartaQueSirve)
+            {
+                if (!yaRobo)
+                    Roba();
+                else
+                    FinDeTurno();
+                    
+            }
+            else
+            {
+                if (cartaSeleccionada != null)
+                {
+                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == cartaSeleccionada.esRojo)
+                    {
+                        GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
+                        cartaSeleccionada = null;
+                        FinDeTurno();
+                    }
+                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.valor == cartaSeleccionada.valor)
+                    {
+                        GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
+                        cartaSeleccionada = null;
+                        FinDeTurno();
+                    }
+                }
+            }
+        }
     }
     public override void Roba()
     {
+        Debug.Log("Jugador robo carta");
         GameManager.manager.TomarCartaMazo(true);
     }
 
-    public bool CheckTieneCartaCorrectaEnMano()
+    public override bool CheckTieneCartaCorrectaEnMano()
     {
         bool tieneCarta = false;
         foreach (Carta c in cartas)
@@ -41,8 +74,9 @@ public class Player : Jugador {
         return tieneCarta;
     }
 
-    public void BuscarCarta(Carta c)
+    public override void BuscarCarta(Carta c)
     {
+        Debug.Log("BUSCANDO CARTA: "+c.name);
         if (cartas.Contains(c))
         {
             if (cartaSeleccionada != null)

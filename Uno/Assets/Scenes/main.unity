@@ -85,6 +85,7 @@ GameObject:
   - 4: {fileID: 31370626}
   - 212: {fileID: 31370628}
   - 114: {fileID: 31370627}
+  - 65: {fileID: 31370629}
   m_Layer: 8
   m_Name: azulSalta
   m_TagString: Untagged
@@ -143,6 +144,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300024, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &31370629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 31370625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &115366985
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +166,7 @@ GameObject:
   - 4: {fileID: 115366986}
   - 212: {fileID: 115366988}
   - 114: {fileID: 115366987}
+  - 65: {fileID: 115366989}
   m_Layer: 0
   m_Name: rojo1
   m_TagString: Untagged
@@ -211,6 +225,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &115366989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115366985}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &154885719
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +247,7 @@ GameObject:
   - 4: {fileID: 154885720}
   - 212: {fileID: 154885722}
   - 114: {fileID: 154885721}
+  - 65: {fileID: 154885723}
   m_Layer: 0
   m_Name: azul2
   m_TagString: Untagged
@@ -279,6 +306,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300012, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &154885723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154885719}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &162779836
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +428,7 @@ GameObject:
   - 4: {fileID: 163706947}
   - 212: {fileID: 163706949}
   - 114: {fileID: 163706948}
+  - 65: {fileID: 163706950}
   m_Layer: 0
   m_Name: azul4
   m_TagString: Untagged
@@ -447,6 +487,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300016, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &163706950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163706946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &240322166
 Prefab:
   m_ObjectHideFlags: 0
@@ -522,6 +574,9 @@ MonoBehaviour:
   cartas: []
   puntaje: 0
   cantidadCartasActual: 0
+  yaRobo: 0
+  tieneCartaQueSirve: 0
+  yaChequeo: 0
 --- !u!4 &242775014
 Transform:
   m_ObjectHideFlags: 0
@@ -909,6 +964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ccce09888482548a72e49283827580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnoJugador: 1
   mazo:
   - {fileID: 463218280}
   - {fileID: 463218280}
@@ -971,6 +1027,7 @@ GameObject:
   - 4: {fileID: 463218279}
   - 212: {fileID: 463218281}
   - 114: {fileID: 463218280}
+  - 65: {fileID: 463218282}
   m_Layer: 0
   m_Name: azul1
   m_TagString: Untagged
@@ -1029,6 +1086,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300010, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &463218282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463218278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &482659694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1129,9 @@ MonoBehaviour:
   cartas: []
   puntaje: 0
   cantidadCartasActual: 0
+  yaRobo: 0
+  tieneCartaQueSirve: 0
+  yaChequeo: 0
   cartaSeleccionada: {fileID: 0}
 --- !u!4 &482659696
 Transform:
@@ -1083,6 +1155,7 @@ GameObject:
   - 4: {fileID: 495476857}
   - 212: {fileID: 495476859}
   - 114: {fileID: 495476858}
+  - 65: {fileID: 495476860}
   m_Layer: 0
   m_Name: azul+2
   m_TagString: Untagged
@@ -1141,6 +1214,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300020, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &495476860
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495476856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &496382817
 Prefab:
   m_ObjectHideFlags: 0
@@ -1258,6 +1343,7 @@ GameObject:
   - 4: {fileID: 537817546}
   - 212: {fileID: 537817548}
   - 114: {fileID: 537817547}
+  - 65: {fileID: 537817549}
   m_Layer: 0
   m_Name: azul3
   m_TagString: Untagged
@@ -1316,6 +1402,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300014, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &537817549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537817545}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &561683566
 Prefab:
   m_ObjectHideFlags: 0
@@ -1465,6 +1563,7 @@ GameObject:
   - 4: {fileID: 781066241}
   - 212: {fileID: 781066242}
   - 114: {fileID: 781066240}
+  - 65: {fileID: 781066243}
   m_Layer: 0
   m_Name: dorso
   m_TagString: Untagged
@@ -1523,6 +1622,18 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300028, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &781066243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 781066239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &876958872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +1757,7 @@ GameObject:
   - 4: {fileID: 994389517}
   - 212: {fileID: 994389519}
   - 114: {fileID: 994389518}
+  - 65: {fileID: 994389520}
   m_Layer: 0
   m_Name: rojo+2
   m_TagString: Untagged
@@ -1704,6 +1816,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300022, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &994389520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 994389516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1026659019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1957,7 @@ GameObject:
   - 4: {fileID: 1369486138}
   - 212: {fileID: 1369486140}
   - 114: {fileID: 1369486139}
+  - 65: {fileID: 1369486141}
   m_Layer: 0
   m_Name: rojo4
   m_TagString: Untagged
@@ -1891,6 +2016,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &1369486141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369486137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1404262813
 Prefab:
   m_ObjectHideFlags: 0
@@ -2221,6 +2358,7 @@ GameObject:
   - 4: {fileID: 1429468518}
   - 212: {fileID: 1429468520}
   - 114: {fileID: 1429468519}
+  - 65: {fileID: 1429468521}
   m_Layer: 0
   m_Name: rojoSalta
   m_TagString: Untagged
@@ -2279,6 +2417,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300026, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &1429468521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1429468517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1462059687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,6 +2439,7 @@ GameObject:
   - 4: {fileID: 1462059688}
   - 212: {fileID: 1462059690}
   - 114: {fileID: 1462059689}
+  - 65: {fileID: 1462059691}
   m_Layer: 0
   m_Name: rojo3
   m_TagString: Untagged
@@ -2347,6 +2498,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &1462059691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462059687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1469372776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,6 +3078,7 @@ GameObject:
   - 4: {fileID: 1939099659}
   - 212: {fileID: 1939099661}
   - 114: {fileID: 1939099660}
+  - 65: {fileID: 1939099662}
   m_Layer: 0
   m_Name: rojo5
   m_TagString: Untagged
@@ -2973,6 +3137,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300008, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &1939099662
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939099658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2014707368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +3159,7 @@ GameObject:
   - 4: {fileID: 2014707369}
   - 212: {fileID: 2014707371}
   - 114: {fileID: 2014707370}
+  - 65: {fileID: 2014707372}
   m_Layer: 0
   m_Name: rojo2
   m_TagString: Untagged
@@ -3041,6 +3218,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &2014707372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2014707368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2054527174
 Prefab:
   m_ObjectHideFlags: 0
@@ -3272,6 +3461,7 @@ GameObject:
   - 4: {fileID: 2090067816}
   - 212: {fileID: 2090067818}
   - 114: {fileID: 2090067817}
+  - 65: {fileID: 2090067819}
   m_Layer: 0
   m_Name: azul5
   m_TagString: Untagged
@@ -3330,3 +3520,15 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300018, guid: 83555f60b51759d4297cbb34d7105b53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!65 &2090067819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090067815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37999988, y: 3.55000019, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
