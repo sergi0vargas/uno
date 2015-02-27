@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager manager;
 
+    public bool turnoJugador = true;
+
+
     public List<Carta> mazo;
     public List<Carta> cartasMesa = new List<Carta>();
     public Carta dorso;
@@ -31,8 +34,7 @@ public class GameManager : MonoBehaviour {
     public Text cartasActualesJugador;
     public Text cartasActualesMaquina;
 
-    /*
-     * 
+    /*GUIIIIIII MIERDA!!!
      * */
 
 	void Awake () {
@@ -65,6 +67,26 @@ public class GameManager : MonoBehaviour {
         cartasActualesJugador.text = "Cartas Actuales: " + jugador.cantidadCartasActual;
         cartasActualesMaquina.text = "Cartas Actuales: " + maquina.cantidadCartasActual;
         cartasActualesMazo.text = "Cartas en Mazo: " + mazo.Count;
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+                Debug.Log("TOCO A: " + hit.transform.name);
+
+        }
+
+        if (turnoJugador)
+        {
+
+        }
+        else
+        {
+
+        }
+
+
     }
 
 
@@ -121,15 +143,19 @@ public class GameManager : MonoBehaviour {
             c.transform.position = posMazo.position;
             c.transform.rotation = posMazo.rotation;
         }
+        int i = 1;
         foreach (Carta c in jugador.cartas)
         {
-            c.transform.position = posJugador.position;
+            c.transform.position = posJugador.position + (new Vector3(posJugador.position.x + i, 0, 0));
             c.transform.rotation = posJugador.rotation;
+            i*=2;
         }
+        i = 1;
         foreach (Carta c in maquina.cartas)
         {
-            c.transform.position = posMaquina.position;
+            c.transform.position = posMaquina.position + (new Vector3(posJugador.position.x + i, 0, 0));
             c.transform.rotation = posMaquina.rotation;
+            i *= 2;
         }
 
         foreach (Carta c in cartasMesa)

@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 465584}
   - 212: {fileID: 21265584}
   - 114: {fileID: 11465584}
+  - 65: {fileID: 6585680}
   m_Layer: 0
   m_Name: dorso
   m_TagString: Untagged
@@ -29,6 +30,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &6585680
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11465584
 MonoBehaviour:
   m_ObjectHideFlags: 1
