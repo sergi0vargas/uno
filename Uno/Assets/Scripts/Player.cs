@@ -70,6 +70,10 @@ public class Player : Jugador {
     public override bool CheckTieneCartaCorrectaEnMano()
     {
         bool tieneCarta = false;
+
+        if (cartas.Count <= 0)
+            return tieneCarta;
+
         foreach (Carta c in cartas)
         {
             if (GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == c.esRojo)
