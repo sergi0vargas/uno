@@ -7,6 +7,11 @@ public class Maquina : Jugador {
     public override void Juega()
     {
 
+        Debug.Log("TURNO MAQUINA -- PRESIONA BARRA ESPACIADORA PARA FINALIZARLO");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.manager.FinTurno(false);
+        }
     }
     public override void Roba()
     {

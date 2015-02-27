@@ -26,17 +26,35 @@ public class Player : Jugador {
             {
                 if (cartaSeleccionada != null)
                 {
-                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == cartaSeleccionada.esRojo)
+                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == cartaSeleccionada.esRojo && cartaSeleccionada != null)
                     {
+                        Debug.Log(cartaSeleccionada);
                         GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
-                        cartaSeleccionada = null;
-                        FinDeTurno();
+                        cantidadCartasActual--;
+                        GameManager.manager.FinTurno(true);
+
+                        if (cartas.Count >= 1)
+                            cartaSeleccionada = cartas[0];
+                        else
+                            cartaSeleccionada = null;
+
+                        cartas.Remove(cartaSeleccionada);
+                        base.FinDeTurno();
                     }
-                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.valor == cartaSeleccionada.valor)
+                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.valor == cartaSeleccionada.valor && cartaSeleccionada != null)
                     {
+                        Debug.Log(cartaSeleccionada);
                         GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
-                        cartaSeleccionada = null;
-                        FinDeTurno();
+                        cantidadCartasActual--;
+                        GameManager.manager.FinTurno(true);
+
+                        if(cartas.Count>= 1)
+                            cartaSeleccionada = cartas[0];
+                        else
+                            cartaSeleccionada = null;
+
+                        cartas.Remove(cartaSeleccionada);
+                        base.FinDeTurno();
                     }
                 }
             }
@@ -46,6 +64,7 @@ public class Player : Jugador {
     {
         Debug.Log("Jugador robo carta");
         GameManager.manager.TomarCartaMazo(true);
+        yaRobo = true;
     }
 
     public override bool CheckTieneCartaCorrectaEnMano()
@@ -76,7 +95,6 @@ public class Player : Jugador {
 
     public override void BuscarCarta(Carta c)
     {
-        Debug.Log("BUSCANDO CARTA: "+c.name);
         if (cartas.Contains(c))
         {
             if (cartaSeleccionada != null)

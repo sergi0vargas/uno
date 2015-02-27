@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour {
         
     }
 
-    void AgregarCartaALaMesa(Carta c)
+    public void AgregarCartaALaMesa(Carta c)
     {
         cartasMesa.Add(cartaEnLaSimaDeLaMesa);
         cartaEnLaSimaDeLaMesa = c;
@@ -184,6 +184,7 @@ public class GameManager : MonoBehaviour {
             maquina.cantidadCartasActual++;
             GeneraCartaSima();
         }
+        ArreglarMesa();
     }
 
     public void OrganizaCartasMesa()
@@ -199,6 +200,19 @@ public class GameManager : MonoBehaviour {
     {
         cartasMesa.Add(cartaEnLaSimaDeLaMesa);
         cartaEnLaSimaDeLaMesa = c;
+        ArreglarMesa();
+    }
+
+    public void ArreglarMesa()
+    {
+        Debug.Log("Reorganizando mesa...");
+        OrganizarCartasInicial();
+        OrganizaCartasMesa();
+    }
+
+    public void FinTurno(bool esTurnoJugador)
+    {
+        turnoJugador = !esTurnoJugador;
     }
 
 }

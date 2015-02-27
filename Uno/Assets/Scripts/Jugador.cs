@@ -32,7 +32,6 @@ public abstract class Jugador : MonoBehaviour {
     {
         yaRobo = false;
         yaChequeo = false;
-        GameManager.manager.turnoJugador = !GameManager.manager.turnoJugador;
     }
 
     public virtual void BuscarCarta(Carta c) { }
