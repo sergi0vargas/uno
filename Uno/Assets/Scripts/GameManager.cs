@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager manager;
 
+    public List<Carta> mazo;
+
 	// Use this for initialization
 	void Awake () {
         //SINGLETON
