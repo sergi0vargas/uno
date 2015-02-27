@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
     public Jugador jugador;
     public Jugador maquina;
 
+    public Carta dorso;
+
 	// Use this for initialization
 	void Awake () {
         //SINGLETON
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Start () {
 
+        RepartirCartas();
 	}
 
     public void RepartirCartas()
