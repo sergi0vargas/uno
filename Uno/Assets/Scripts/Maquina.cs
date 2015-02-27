@@ -10,7 +10,7 @@ public class Maquina : Jugador {
     }
     public override void Roba()
     {
-
+        GameManager.manager.TomarCartaMazo(false);
     }
 
 }

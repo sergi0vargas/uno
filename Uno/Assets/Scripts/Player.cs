@@ -10,6 +10,6 @@ public class Player : Jugador {
     }
     public override void Roba()
     {
-
+        GameManager.manager.TomarCartaMazo(true);
     }
 }

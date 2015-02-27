@@ -65,9 +65,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cartasMesa: []
+  dorso: {fileID: 0}
   jugador: {fileID: 0}
   maquina: {fileID: 0}
-  dorso: {fileID: 0}
+  posMazo: {fileID: 0}
+  posMesa: {fileID: 0}
+  posJugador: {fileID: 0}
+  posMaquina: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
