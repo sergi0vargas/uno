@@ -8,7 +8,7 @@ public abstract class Jugador : MonoBehaviour {
 
     public int puntaje = 0;
 
-    public bool maquina = false;
+    //public bool maquina = false; //no hace falta
 
 	public abstract void Juega();
     public abstract void Roba();
