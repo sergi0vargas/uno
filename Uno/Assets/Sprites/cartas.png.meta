@@ -16,6 +16,7 @@ TextureImporter:
     21300022: rojo_+2
     21300024: azul_salta
     21300026: rojo_salta
+    21300028: dorso
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -192,6 +193,16 @@ TextureImporter:
         serializedVersion: 2
         x: 2401
         y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dorso
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 1442
         width: 238
         height: 355
       alignment: 0
