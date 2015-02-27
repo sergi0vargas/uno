@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -20,7 +21,20 @@ public class GameManager : MonoBehaviour {
     public Transform posMesa;
     public Transform posJugador;
     public Transform posMaquina;
-    
+
+
+    /// GUIIIIIII MIERDA!!!
+
+    public Text puntajePlayer;
+    public Text puntajeMaquina;
+    public Text cartasActualesMazo;
+    public Text cartasActualesJugador;
+    public Text cartasActualesMaquina;
+
+    /*
+     * 
+     * */
+
 	void Awake () {
         //SINGLETON
         if (manager == null)
@@ -42,6 +56,18 @@ public class GameManager : MonoBehaviour {
         OrganizarCartasInicial();
 	}
 
+
+    void Update()
+    {
+        //CAMBIAR!!! SOLO DEBE ACTUALIZARSE EN CADA MOVIDA
+        puntajePlayer.text = "Puntaje Jugador: " + jugador.puntaje;
+        puntajeMaquina.text = "Puntaje Maquina: " + maquina.puntaje;
+        cartasActualesJugador.text = "Cartas Actuales: " + jugador.cantidadCartasActual;
+        cartasActualesMaquina.text = "Cartas Actuales: " + maquina.cantidadCartasActual;
+        cartasActualesMazo.text = "Cartas en Mazo: " + mazo.Count;
+    }
+
+
     public void RepartirCartas()
     {
         if (mazo.Count <= 0)
@@ -55,18 +81,18 @@ public class GameManager : MonoBehaviour {
             temp = mazo[Random.Range(0, mazo.Count)];
             jugador.cartas.Add(temp);
             mazo.Remove(temp);
+            jugador.cantidadCartasActual++;
 
             //Agrega cartas a la maquina
             temp = mazo[Random.Range(0, mazo.Count)];
             maquina.cartas.Add(temp);
             mazo.Remove(temp);
+            maquina.cantidadCartasActual++;
             
         }
         //Agrega una carta a la mesa
         cartaEnLaSimaDeLaMesa = mazo[Random.Range(0, mazo.Count)];
         mazo.Remove(cartaEnLaSimaDeLaMesa);
-
-
         //Saca 1 carta del maso y la alista para ser tomada
         GeneraCartaSima();
         
@@ -111,6 +137,8 @@ public class GameManager : MonoBehaviour {
             c.transform.position = posMesa.position;
             c.transform.rotation = posMesa.rotation;
         }
+        cartaEnLaSimaDeLaMesa.transform.position = posMesa.position;
+        cartaEnLaSimaDeLaMesa.transform.rotation = posMesa.rotation;
 
     }
 
