@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Jump Camp\Programación\Introducción\SuperBurbujas\Assets\Scripts\LoadMainLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Jump Camp\Programación\Introducción\SuperBurbujas\Assets\Scripts\SoundController.cs">
     <Files>
-      <File FileName="..\..\Jump Camp\Programación\Introducción\SuperBurbujas\Assets\Scripts\LoadMainLevel.cs" Line="1" Column="1" />
+      <File FileName="..\..\Jump Camp\Programación\Introducción\SuperBurbujas\Assets\Scripts\SoundController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
