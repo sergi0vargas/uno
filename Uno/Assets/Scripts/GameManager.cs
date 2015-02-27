@@ -149,14 +149,14 @@ public class GameManager : MonoBehaviour {
         {
             c.transform.position = posJugador.position + (new Vector3(posJugador.position.x + i, 0, 0));
             c.transform.rotation = posJugador.rotation;
-            i*=2;
+            i += 1;
         }
         i = 1;
         foreach (Carta c in maquina.cartas)
         {
             c.transform.position = posMaquina.position + (new Vector3(posJugador.position.x + i, 0, 0));
             c.transform.rotation = posMaquina.rotation;
-            i *= 2;
+            i += 1;
         }
 
         foreach (Carta c in cartasMesa)
@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour {
 
     public void TomarCartaMazo(bool esJugador)
     {
-        if (mazo.Count < 0)
+        if (mazo.Count <= 0)
             return;
 
         if (esJugador)

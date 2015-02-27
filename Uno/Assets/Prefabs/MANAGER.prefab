@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ccce09888482548a72e49283827580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnoJugador: 1
   mazo:
   - {fileID: 0}
   - {fileID: 0}

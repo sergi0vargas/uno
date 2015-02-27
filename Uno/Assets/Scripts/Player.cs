@@ -26,34 +26,26 @@ public class Player : Jugador {
             {
                 if (cartaSeleccionada != null)
                 {
-                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == cartaSeleccionada.esRojo && cartaSeleccionada != null)
+					if (cartaSeleccionada != null && GameManager.manager.cartaEnLaSimaDeLaMesa.esRojo == cartaSeleccionada.esRojo)
                     {
                         Debug.Log(cartaSeleccionada);
                         GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
                         cantidadCartasActual--;
                         GameManager.manager.FinTurno(true);
 
-                        if (cartas.Count >= 0)
-                            cartaSeleccionada = cartas[0];
-                        else
-                            cartaSeleccionada = null;
+                        cartaSeleccionada = null;
 
-                        cartas.Remove(cartaSeleccionada);
                         base.FinDeTurno();
                     }
-                    if (GameManager.manager.cartaEnLaSimaDeLaMesa.valor == cartaSeleccionada.valor && cartaSeleccionada != null)
+					if (cartaSeleccionada != null && GameManager.manager.cartaEnLaSimaDeLaMesa.valor == cartaSeleccionada.valor)
                     {
                         Debug.Log(cartaSeleccionada);
                         GameManager.manager.AgregarCartaAlLaMesa(cartaSeleccionada);
                         cantidadCartasActual--;
                         GameManager.manager.FinTurno(true);
 
-                        if (cartas.Count >= 0)
-                            cartaSeleccionada = cartas[0];
-                        else
-                            cartaSeleccionada = null;
+                        cartaSeleccionada = null;
 
-                        cartas.Remove(cartaSeleccionada);
                         base.FinDeTurno();
                     }
                 }
