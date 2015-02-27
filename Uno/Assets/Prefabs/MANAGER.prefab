@@ -66,8 +66,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cartasMesa: []
-  jugador: {fileID: 11413494, guid: ceaeef92f3ad1ef449db87a3f60c613a, type: 2}
-  maquina: {fileID: 11431040, guid: 7f2c92060585ce749adbbab51bd2327f, type: 2}
+  jugador: {fileID: 0}
+  maquina: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
