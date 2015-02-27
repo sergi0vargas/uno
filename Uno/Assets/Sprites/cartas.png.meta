@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 83555f60b51759d4297cbb34d7105b53
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rojo_1
+    21300002: rojo_2
+    21300004: rojo_3
+    21300006: rojo_4
+    21300008: rojo_5
+    21300010: azul_1
+    21300012: azul_2
+    21300014: azul_3
+    21300016: azul_4
+    21300018: azul_5
+    21300020: azul_+2
+    21300022: rojo_+2
+    21300024: azul_salta
+    21300026: rojo_salta
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: rojo_1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_2
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_3
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_4
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_5
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_2
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_3
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_4
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_5
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 2
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_+2
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_+2
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: azul_salta
+      rect:
+        serializedVersion: 2
+        x: 2398
+        y: 0
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rojo_salta
+      rect:
+        serializedVersion: 2
+        x: 2401
+        y: 1084
+        width: 238
+        height: 355
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
