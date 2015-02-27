@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager manager;
 
+    public bool turnoJugador = true;
+
+
     public List<Carta> mazo;
     public List<Carta> cartasMesa = new List<Carta>();
     public Carta dorso;
@@ -31,8 +34,7 @@ public class GameManager : MonoBehaviour {
     public Text cartasActualesJugador;
     public Text cartasActualesMaquina;
 
-    /*
-     * 
+    /*GUIIIIIII MIERDA!!!
      * */
 
 	void Awake () {
@@ -74,6 +76,16 @@ public class GameManager : MonoBehaviour {
                 Debug.Log("TOCO A: " + hit.transform.name);
 
         }
+
+        if (turnoJugador)
+        {
+
+        }
+        else
+        {
+
+        }
+
 
     }
 
