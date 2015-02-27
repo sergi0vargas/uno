@@ -8,13 +8,17 @@ public class GameManager : MonoBehaviour {
 
     public List<Carta> mazo;
     public List<Carta> cartasMesa = new List<Carta>();
-
+    public Carta dorso;
+    //CARTAS DE LOS JUGADORES
     public Jugador jugador;
     public Jugador maquina;
 
-    public Carta dorso;
-
-	// Use this for initialization
+    //Posicion de las cartas
+    public Transform posMazo;
+    public Transform posMesa;
+    public Transform posJugador;
+    public Transform posMaquina;
+    
 	void Awake () {
         //SINGLETON
         if (manager == null)
@@ -29,7 +33,7 @@ public class GameManager : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
+
 	void Start () {
 
         RepartirCartas();
@@ -62,4 +66,27 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Agregada carta a la mesa");
 
     }
+
+    public void OrganizarCartasInicial()
+    {
+
+        foreach (Carta c in mazo)
+        {
+
+        }
+        foreach (Carta c in cartasMesa)
+        {
+
+        }
+        foreach (Carta c in jugador.cartas)
+        {
+
+        }
+        foreach (Carta c in maquina.cartas)
+        {
+
+        }
+
+    }
+
 }
