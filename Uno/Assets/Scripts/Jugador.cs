@@ -15,6 +15,8 @@ public abstract class Jugador : MonoBehaviour {
     public bool tieneCartaQueSirve;
     public bool yaChequeo = false;
 
+
+
     //public bool maquina = false; //no hace falta
 
 	public abstract void Juega();
