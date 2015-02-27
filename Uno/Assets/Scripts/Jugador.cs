@@ -10,9 +10,31 @@ public abstract class Jugador : MonoBehaviour {
 
     public int cantidadCartasActual = 0;
 
+    public bool yaRobo = false;
+
+    public bool tieneCartaQueSirve;
+    public bool yaChequeo = false;
+
     //public bool maquina = false; //no hace falta
 
 	public abstract void Juega();
     public abstract void Roba();
+
+    public void ComienzoDeTurno()
+    {
+        tieneCartaQueSirve = CheckTieneCartaCorrectaEnMano();
+        yaChequeo = true;
+    }
+
+    public abstract bool CheckTieneCartaCorrectaEnMano();
+
+    public void FinDeTurno()
+    {
+        yaRobo = false;
+        yaChequeo = false;
+        GameManager.manager.turnoJugador = !GameManager.manager.turnoJugador;
+    }
+
+    public virtual void BuscarCarta(Carta c) { }
 
 }

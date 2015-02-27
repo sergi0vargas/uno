@@ -68,22 +68,21 @@ public class GameManager : MonoBehaviour {
         cartasActualesMaquina.text = "Cartas Actuales: " + maquina.cantidadCartasActual;
         cartasActualesMazo.text = "Cartas en Mazo: " + mazo.Count;
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-                Debug.Log("TOCO A: " + hit.transform.name);
-
-        }
-
         if (turnoJugador)
         {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 100))
+                    jugador.BuscarCarta(hit.transform.GetComponent<Carta>());
+            }
 
+            jugador.Juega();
         }
         else
         {
-
+            maquina.Juega();
         }
 
 
@@ -194,6 +193,12 @@ public class GameManager : MonoBehaviour {
             cartasMesa[i].GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
         cartaEnLaSimaDeLaMesa.GetComponent<SpriteRenderer>().sortingOrder = 1;
+    }
+
+    public void AgregarCartaAlLaMesa(Carta c)
+    {
+        cartasMesa.Add(cartaEnLaSimaDeLaMesa);
+        cartaEnLaSimaDeLaMesa = c;
     }
 
 }
