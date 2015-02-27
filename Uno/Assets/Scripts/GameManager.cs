@@ -1,11 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
+    public static GameManager manager;
+
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+        //SINGLETON
+        if (manager == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        }
+        else if (manager != this)
+        {
+            Destroy(gameObject);
+        }
+
 	}
 	
 	// Update is called once per frame
