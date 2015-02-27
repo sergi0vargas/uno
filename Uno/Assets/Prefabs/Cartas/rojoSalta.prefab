@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 480716}
   - 212: {fileID: 21280716}
   - 114: {fileID: 11480716}
+  - 65: {fileID: 6585680}
   m_Layer: 0
   m_Name: rojoSalta
   m_TagString: Untagged
@@ -29,6 +30,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!65 &6585680
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11480716
 MonoBehaviour:
   m_ObjectHideFlags: 1

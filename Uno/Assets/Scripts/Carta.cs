@@ -9,4 +9,5 @@ public class Carta : MonoBehaviour {
     public bool cartaSalta = false;
     public bool cartaMasDos = false;
 
+
 }
