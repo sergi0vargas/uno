@@ -33,7 +33,7 @@ public class Player : Jugador {
                         cantidadCartasActual--;
                         GameManager.manager.FinTurno(true);
 
-                        if (cartas.Count >= 1)
+                        if (cartas.Count >= 0)
                             cartaSeleccionada = cartas[0];
                         else
                             cartaSeleccionada = null;
@@ -48,7 +48,7 @@ public class Player : Jugador {
                         cantidadCartasActual--;
                         GameManager.manager.FinTurno(true);
 
-                        if(cartas.Count>= 1)
+                        if (cartas.Count >= 0)
                             cartaSeleccionada = cartas[0];
                         else
                             cartaSeleccionada = null;

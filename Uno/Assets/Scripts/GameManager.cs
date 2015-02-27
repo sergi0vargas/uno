@@ -142,6 +142,8 @@ public class GameManager : MonoBehaviour {
             c.transform.position = posMazo.position;
             c.transform.rotation = posMazo.rotation;
         }
+
+        ///SE SOBREPONEN LAS CARTAS.
         int i = 1;
         foreach (Carta c in jugador.cartas)
         {
@@ -169,7 +171,7 @@ public class GameManager : MonoBehaviour {
 
     public void TomarCartaMazo(bool esJugador)
     {
-        if (mazo.Count <= 0)
+        if (mazo.Count < 0)
             return;
 
         if (esJugador)
